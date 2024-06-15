@@ -32,13 +32,13 @@ export default function RootLayout({ children }) {
       /> */}
 
   {/* Google tag (gtag.js) */}
-  <Script strategy="lazyOnload" async src={`https://www.googletagmanager.com/gtag/js?id=G-0MT3JZZC9Y`}></Script>
+  <Script strategy="lazyOnload" async src={`https://www.googletagmanager.com/gtag/js?id=G-3W9PQ6L68X`}></Script>
       <Script id="google-analytics" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', G-0MT3JZZC9Y,{
+          gtag('config',G-3W9PQ6L68X,{
           page_path:window.location.pathname,
           })
         `}
