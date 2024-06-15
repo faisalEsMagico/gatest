@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,6 +12,38 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      {/* <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-0MT3JZZC9Y`}
+      />
+      <Script
+        strategy="afterInteractive"
+        id="gtag-init"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-0MT3JZZC9Y', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      /> */}
+
+  {/* Google tag (gtag.js) */}
+  <Script strategy="lazyOnload" async src={`https://www.googletagmanager.com/gtag/js?id=G-0MT3JZZC9Y`}></Script>
+      <Script id="google-analytics" strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', G-0MT3JZZC9Y,{
+          page_path:window.location.pathname,
+          })
+        `}
+      </Script>
+
       <body className={inter.className}>{children}</body>
     </html>
   );
