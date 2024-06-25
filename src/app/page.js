@@ -12,7 +12,7 @@ export default function Home() {
   }, []);
   return (
     <main className={styles.main}>
-      <div className={styles.description}>hello this is my app</div>
+      <div className={styles.description}>hello this is my new app</div>
     </main>
   );
 }
