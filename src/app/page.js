@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import ReactGA from "react-ga";
 
 import { useEffect } from "react";
-ReactGA.initialize("UA-000000-01");
+ReactGA.initialize("G-3W9PQ6L68X");
 
 export default function Home() {
   useEffect(() => {
